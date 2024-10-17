@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #sim {
+            background-color: #28a745;
+            color: white;
+        }
+        #nao {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Você sabia que é linda e que eu te amo?</h1>
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+
+    <script>
+        const botaoNao = document.getElementById('nao');
+        const botaoSim = document.getElementById('sim');
+
+        botaoNao.addEventListener('click', function() {
+            const x = Math.random() * 80;
+            const y = Math.random() * 80;
+            botaoNao.style.position = 'absolute';
+            botaoNao.style.top = y + 'vh';
+            botaoNao.style.left = x + 'vw';
+        });
+
+        botaoSim.addEventListener('click', function() {
+            window.location.href = 'https://youtu.be/V141wUSkTfk?si=4ZYODBFt3LJPx6a4';
+        });
+    </script>
+
+</body>
+</html> 
